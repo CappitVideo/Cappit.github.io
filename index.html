@@ -2,31 +2,44 @@
 <head>
     <title>Cappit</title>
     <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
-<body style="max-width: 1000px; margin: auto;">
-    <h1>Coming Soon!</h1>
-    <h1>Cappit</h1>
+<body>
+    <div class="header onLoad">
+        <div class="header-content">
+            <img class="header-background" src="images/Header.jpg"/>
+            <div class="header-background-overlay onLoad"><div class="logo">Cappit</div>We create your video's!</div>
+        </div>
+    </div>
+    <div class="page">
+        <h1>Coming Soon!</h1>
 
-    <p>
-        Get in touch with us today! <br/>
-        Fill out the contact form below and let us know how we can bring your video ideas to life. <br/>
-        We are ready to create captivating videos that showcase your brand. <br/>
-        We value clear communication and transparent pricing. <br/>
-        Submit the form now, and we'll be in touch shortly to discuss your project. <br/>
-        Let's tell your story together!
-        <br/>
-        <br/>
-        Florian & Laurens
-        <br/>
+        <p>
+            Get in touch with us today! <br/>
+            Fill out the contact form below and let us know how we can bring your video ideas to life. <br/>
+            We are ready to create captivating videos that showcase your brand. <br/>
+            We value clear communication and transparent pricing. <br/>
+            Submit the form now, and we'll be in touch shortly to discuss your project. <br/>
+            Let's tell your story together!
+            <br/>
+            <br/>
+            Florian & Laurens
+        </p>
         <form id="contact-form" action="https://formspree.io/f/xrgvvyjw" method="POST">
-            <label>Email:</label>
-            <input type="email" name="email" />
-            <label>Message:</label>
-            <input type="text" name="message" />
-            <button id="contact-form-button">Submit</button>
-            <p id="contact-form-status"></p>
-          </form>
-    </p>
+            <table>
+            <tr><td><label>Email:</label></td>
+            <td><input type="email" name="email" /></td></tr>
+            <tr><td><label>Message:</label></td>
+            <td><textarea name="message"></textarea></td></tr>
+            <tr><td><button id="contact-form-button">Submit</button></td></tr>
+            <tr><td><p id="contact-form-status"></p></td></tr>
+            </table>
+        </form>
+    </div>
 
     <script>
         var form = document.getElementById("contact-form");
@@ -35,13 +48,8 @@
           event.preventDefault();
           var status = document.getElementById("contact-form-status");
           var data = new FormData(event.target);
-          fetch(event.target.action, {
-            method: form.method,
-            body: data,
-            headers: {
-                'Accept': 'application/json'
-            }
-          }).then(response => {
+          fetch(event.target.action, { method: form.method, body: data, headers: {'Accept': 'application/json'} })
+          .then(response => {
             if (response.ok) {
               status.innerHTML = "Thanks for your submission!";
               form.reset()

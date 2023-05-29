@@ -1,0 +1,106 @@
+@keyframes onLoad {
+    0%   { height: 100vh; }
+    50%  { height: 100vh; }
+    100% { height: 30vh;  }
+}
+
+@keyframes onLoadOverflow {
+    0%   { overflow: hidden; }
+    50%  { overflow: hidden; }
+    100% { overflow: hidden; }
+}
+
+@keyframes onLoadHeaderSpace {
+    0%   { margin-top: 300px; }
+    50%  { margin-top: 300px; }
+    100% { margin-top: 70px;  }
+}
+
+body {
+    background-color: rgb(243, 243, 243);
+    min-height: 70vh;
+    max-height: 100vh;
+    width: 100%;
+    animation-name: onLoadOverflow;
+    animation-duration: 4s;
+    overflow-y: auto; overflow-x: hidden; 
+}
+
+.onLoad {
+    animation-name: onLoad;
+    animation-duration: 4s;
+}
+
+.header {
+    width: 100vw;
+    height: 30vh;
+}
+
+.header-content {
+    height: 100%;
+}
+
+.header-background {
+    object-fit: cover;
+    object-position: 50% 35%;
+    width: 100%;
+    height: 100%;
+}
+
+.header-background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30vh;
+    background-color: rgba(177, 177, 177, 0.692);
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    text-shadow: 0px 0px 10px #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo {
+    color: white;
+    background-color: #A9D4B2;
+    display: table;
+    font-size: 75px;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 3px;
+    margin: 10px auto;
+    margin-top: 70px;
+    padding: 10px 10px 5px 10px;
+    border-radius: 24px;
+    text-shadow: none;
+    animation-name: onLoadHeaderSpace;
+    animation-duration: 4s;
+
+    box-shadow:
+        0px 0px 2.2px rgba(0, 0, 0, 0.034),
+        0px 0px 5.3px rgba(0, 0, 0, 0.048),
+        0px 0px 10px rgba(0, 0, 0, 0.06),
+        0px 0px 17.9px rgba(0, 0, 0, 0.072),
+        0px 0px 33.4px rgba(0, 0, 0, 0.086),
+        0px 0px 80px rgba(0, 0, 0, 0.12)
+    ;
+}
+
+.page {
+    margin: auto;
+    background-color: white;
+    max-width: 1000px;
+    min-height: calc(70vh - 40px);
+    padding: 20px 40px;
+    margin-top: 0;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 50px;
+    margin: 20px 0px;
+    text-align: center;
+}
