@@ -1,5 +1,5 @@
 :root {
-    --loadAnimTime: 0s;
+    --loadAnimTime: 4s;
 }
 
 @keyframes onLoad {
