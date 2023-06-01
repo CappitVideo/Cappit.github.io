@@ -38,12 +38,13 @@
         </p>
         <form id="contact-form" action="https://formspree.io/f/xrgvvyjw" method="POST">
             <table>
-            <tr><td><label>Email:</label></td>
-            <td><input type="email" name="email" /></td></tr>
-            <tr><td><label>Message:</label></td>
-            <td><textarea name="message"></textarea></td></tr>
-            <tr><td><button id="contact-form-button">Submit</button></td></tr>
-            <tr><td><p id="contact-form-status"></p></td></tr>
+            <tr><th class="lowCol"><label>Email</label></td>
+            <td class="lowCol"><input type="email" name="email" class="emailInput" /></td></tr>
+            <tr><th class="lowCol"><label>Message</label></td>
+            <td rowspan="2"><textarea class="messageInput" name="message"></textarea></td></tr>
+            <tr><td>&nbsp;</td></tr>
+            <tr><td></td><td><p id="contact-form-status"></p></td></tr>
+            <tr><td></td><td class="submitCol"><button id="contact-form-button">Submit</button></td></tr>
             </table>
         </form>
     </div>

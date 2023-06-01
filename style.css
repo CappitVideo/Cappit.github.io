@@ -1,3 +1,7 @@
+:root {
+    --loadAnimTime: 0s;
+}
+
 @keyframes onLoad {
     0%   { height: 100vh; }
     50%  { height: 100vh; }
@@ -22,13 +26,13 @@ body {
     max-height: 100vh;
     width: 100%;
     animation-name: onLoadOverflow;
-    animation-duration: 4s;
+    animation-duration: var(--loadAnimTime);
     overflow-y: auto; overflow-x: hidden; 
 }
 
 .onLoad {
     animation-name: onLoad;
-    animation-duration: 4s;
+    animation-duration: var(--loadAnimTime);
 }
 
 .header {
@@ -75,7 +79,7 @@ body {
     border-radius: 24px;
     text-shadow: none;
     animation-name: onLoadHeaderSpace;
-    animation-duration: 4s;
+    animation-duration: var(--loadAnimTime);
 
     box-shadow:
         0px 0px 2.2px rgba(0, 0, 0, 0.034),
@@ -103,4 +107,46 @@ h1 {
     font-size: 50px;
     margin: 20px 0px;
     text-align: center;
+}
+
+.emailInput, .messageInput {
+    width: 400px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid grey;
+}
+
+.messageInput {
+    height: 200px;
+    resize: none;
+}
+
+form table {
+    margin: auto;
+}
+
+form td, form th {
+    text-align: right;
+    vertical-align: middle;
+    padding: 5px;
+}
+
+form th {
+    font-weight: bold;
+}
+
+.lowCol {
+    height: 40px;
+}
+
+.submitCol {
+    text-align: right;
+}
+
+.submitCol button {
+    background-color: #A9D4B2;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
 }
