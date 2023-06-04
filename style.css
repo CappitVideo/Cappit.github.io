@@ -63,6 +63,7 @@ body {
     font-size: 50px;
     text-shadow: 0px 0px 10px #000000;
     font-family: 'Roboto', sans-serif;
+    font-weight: 100;
 }
 
 .logo {
@@ -96,17 +97,112 @@ body {
     background-color: white;
     max-width: 1000px;
     min-height: calc(70vh - 40px);
-    padding: 20px 40px;
     margin-top: 0;
     font-size: 20px;
     line-height: 24px;
 }
 
+.categoryBtns {
+    position: relative;
+    width: calc(100% - 80px);
+    padding: 20px 40px;
+}
+
+.categoryBtn {
+    position: relative;
+    width: 230px;
+    height: 230px;
+    border-radius: 25px;
+    display: inline-block;
+    text-align: center;
+    margin: 20px 36px;
+    border: none;
+    background-color: #A9D4B2;
+    overflow: hidden;
+
+    box-shadow:
+        0px 0px 2.2px rgba(0, 0, 0, 0.02),
+        0px 0px 5.3px rgba(0, 0, 0, 0.028),
+        0px 0px 10px rgba(0, 0, 0, 0.035),
+        0px 0px 17.9px rgba(0, 0, 0, 0.042),
+        0px 0px 33.4px rgba(0, 0, 0, 0.05),
+        0px 0px 80px rgba(0, 0, 0, 0.07)
+    ;
+}
+
+.categoryBtn div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 230px;
+    width: 230px;
+    border-radius: 25px;
+    transition: all 0.4s ease;
+}
+
+.categoryBtn .text {
+    color: grey;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 55px;    
+}
+
+.categoryBtn .text .icon {
+    display: block;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.categoryBtn .background {
+    background-color: #FFFFFF;
+    top: 0;
+    height: 220px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.categoryBtn:hover { cursor: pointer; }
+.categoryBtn:hover .background {
+    top: 0px;
+    height: 0px;
+}
+.categoryBtn:hover .text { color: white; }
+
+
+
 h1 {
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 50px;
-    margin: 20px 0px;
-    text-align: center;
+    padding: 30px 20px;
+    color: gray;
+    width: calc(100% - 40px);
+}
+.center { text-align: center; }
+
+.contact { 
+    background-color: #A9D4B2; 
+    color: white; 
+    padding: 20px 40px;
+}
+.contact .text, .contact .form {
+    display: inline-block;
+    vertical-align: top;
+}
+.contact h1 {
+    color: white;
+}
+
+.contact .text { 
+    margin-left: 3%;
+    width: 35%; 
+    font-size: 18px;
+    text-align: justify;
+    font-weight: 400;
+}
+.contact .form { 
+    margin-left: 5%;
+    width: 50%;
 }
 
 .emailInput, .messageInput {
@@ -132,7 +228,8 @@ form td, form th {
 }
 
 form th {
-    font-weight: bold;
+    font-weight: 400;
+    color: white;
 }
 
 .lowCol {
@@ -144,9 +241,15 @@ form th {
 }
 
 .submitCol button {
-    background-color: #A9D4B2;
-    color: white;
+    background-color: white;
+    color: gray;
+    font-weight: bold;
     padding: 10px;
     border-radius: 15px;
     border: none;
+    cursor: pointer;
+}
+.submitCol button:hover {
+    background-color: lightgray;
+    color: white;
 }
